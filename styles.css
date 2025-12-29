@@ -1,0 +1,33 @@
+/* RESET */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    align-items: center;
+    border: 20px double black;
+    display: flex;
+    flex-direction: column;
+    font-family: sans-serif;
+    justify-content: center;
+    min-height: 100vh;
+    gap: 20px;
+}
+
+header {
+    font-size: 15px;
+    font-weight: normal;
+    color: #939393d6
+}
+
+main {
+    font-size: 200px;
+    font-weight: 100;
+}
+
+footer {
+    font-size: 25px;
+}
