@@ -6,12 +6,32 @@
     <title>Mini-Project Current Time of User</title>
     <link rel="stylesheet" href="styles.css">
     <script src="node_modules/dayjs/dayjs.min.js"></script>
+    <script src="node_modules/dayjs/plugin/utc.js"></script>
+    <script src="node_modules/dayjs/plugin/timezone.js"></script>
+    <script src="node_modules/micromodal/dist/micromodal.min.js"></script>
+    <link rel="stylesheet" href="node_modules/@fortawesome/fontawesome-free/css/all.min.css">
     
 </head>
 <body>
     <header>
         <h1 class="timezone">Name of User's Timezone</h1>
+        <button id="change-timezone" data-micromodal-trigger="modal-1"><i class="fa-regular fa-pen-to-square"></i></button>
     </header>
+
+    <div class="modal" id="modal-1" aria-hidden="true">
+        <div class="modal__overlay" tabindex="-1" data-micromodal-close>
+            <div class="modal__container" role="dialog" aria-modal="true" aria-labelledby="modal-1-title">  
+                <header class="modal__header">
+                    <h2 class="modal__title" id="modal-1-title">Change Timezone</h2>
+                    <button class="modal__close" aria-label="Close modal" data-micromodal-close></button>
+                </header>
+                <main class="modal__content" id="modal-1-content">
+                    <select id="choose-timezone"></select>
+                </main>
+            </div>
+        </div>
+    </div>
+
     <main>
         <div class="current-time">
             <p>00:00:00</p>
